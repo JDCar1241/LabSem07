@@ -70,8 +70,8 @@ virtual-store/
 │   │   ├── PaymentProcessor.java
 │   │   ├── ExternalPayPalService.java
 │   │   ├── PayPalAdapter.java
-│   │   ├── CreditCardPaymentProcessor.java
-│   │   └── YapePaymentProcessor.java
+│   │   └── CreditCardPaymentProcessor.java
+│   │   
 │   ├── observer/
 │   │   ├── OrderObserver.java
 │   │   ├── EmailNotificationObserver.java
@@ -87,66 +87,12 @@ virtual-store/
 ## Salida esperada en consola
 
 ```
-============================================
-     TIENDA VIRTUAL — Patrones de Diseño    
-============================================
+Pago realizado con PayPal: PEN 2340.0
+Compra confirmada por S/ 2340.0
+Enviando correo al cliente...
+Actualizando inventario...
+Notificando al administrador...
 
---- Agregando productos al carrito ---
-Producto agregado: Laptop HP x1 (S/ 1500.00 c/u)
-Producto agregado: Auriculares Sony x2 (S/ 250.00 c/u)
-Producto agregado: Mouse Logitech x1 (S/ 80.00 c/u)
-
---- Configurando estrategia de descuento ---
---- Configurando método de pago ---
-
-========== RESUMEN DEL CARRITO ==========
-  - Laptop HP x1 (S/ 1500.00 c/u)
-  - Auriculares Sony x2 (S/ 250.00 c/u)
-  - Mouse Logitech x1 (S/ 80.00 c/u)
-Subtotal: S/ 2080.00
-Descuento del 10% aplicado: -S/ 208.00
-Total a pagar: S/ 1872.00
-
-========== PROCESANDO PAGO ==========
-Pago realizado con PayPal: PEN 1872.00
-
-========== CONFIRMACIÓN ==========
-Compra confirmada por S/ 1872.00
-
-========== NOTIFICACIONES ==========
-Enviando correo al cliente: Compra confirmada por S/ 1872.00
-Actualizando inventario: Compra confirmada por S/ 1872.00
-Notificando al administrador: Compra confirmada por S/ 1872.00
-
-============================================
-       Proceso completado exitosamente       
-============================================
 ```
-
----
-
-## Commits convencionales sugeridos
-
-```bash
-git init
-git add src/model/
-git commit -m "feat: add Product and Cart models"
-
-git add src/strategy/
-git commit -m "feat: implement discount strategy pattern"
-
-git add src/adapter/
-git commit -m "feat: add PayPal adapter and payment processors"
-
-git add src/observer/
-git commit -m "feat: implement order observers"
-
-git add src/service/
-git commit -m "feat: add OrderService with observer notification"
-
-git add src/Main.java
-git commit -m "feat: integrate all patterns in main entry point"
-
-git add README.md
-git commit -m "docs: add project documentation and README"
-```
+## Imagen
+![img_1.png](img_1.png)
